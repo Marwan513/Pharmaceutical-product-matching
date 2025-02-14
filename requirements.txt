@@ -1,0 +1,6 @@
+pandas
+rapidfuzz
+deep-translator
+numpy
+scikit-learn
+joblib
