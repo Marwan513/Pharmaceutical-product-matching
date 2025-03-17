@@ -23,8 +23,8 @@ pip install -r requirements.txt
 ## Download the Pre-Trained Models
 The pre-trained models are hosted separately due to their size (>100MB). Download and extract them using:
 ```sh
-wget https://github.com/Marwan513/Pharmaceutical-product-matching/releases/download/v1.0/models.zip
-unzip models.zip -d models/
+wget https://github.com/Marwan513/Pharmaceutical-product-matching/releases/download/v1.0/models.zip -OutFile models.zip
+Expand-Archive -Path models.zip -DestinationPath models
 ```
 
 ## Models Used
