@@ -36,6 +36,7 @@ To train a model, run the `train_models.ipynb` notebook. The training dataset mu
 
 ### Testing
 To test the model, run the `test_models.ipynb` notebook. The test dataset must be in a format similar to the `test file` in the repository. If not, it is recommended to modify the test file accordingly.
+note: if you change the training data you should split the `master file` sheet from the new train data and give it to the test code as an input with the `test file`.
 
 ## Contributing
 Feel free to submit issues and pull requests to improve this project.
