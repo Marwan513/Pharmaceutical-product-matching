@@ -1,0 +1,24 @@
+name: Log Repo Activity
+
+on:  
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  log_activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch repo traffic stats
+        run: |
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/traffic/clones > clone_stats.json
+      
+      - name: Display Clone Stats
+        run: cat clone_stats.json
