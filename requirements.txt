@@ -4,3 +4,4 @@ deep-translator
 numpy
 scikit-learn
 joblib
+openpyxl
